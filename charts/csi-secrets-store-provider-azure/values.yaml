@@ -102,7 +102,7 @@ secrets-store-csi-driver:
     nodeSelector:
       env: dev
     kubeletRootDir: /var/lib/kubelet
-    metricsAddr: ":8080"
+    metricsAddr: ":8081"
     image:
       repository: mcr.microsoft.com/oss/kubernetes-csi/secrets-store/driver
       tag: v0.1.0
