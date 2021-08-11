@@ -98,9 +98,9 @@ windows:
 secrets-store-csi-driver:
   install: true
   linux:
-    enabled: true
     nodeSelector:
       env: dev
+    enabled: true
     kubeletRootDir: /var/lib/kubelet
     metricsAddr: ":8081"
     image:
@@ -152,7 +152,7 @@ rbac:
   pspEnabled: false
 
 # explicitly reconstruct the pem chain in the order: SERVER, INTERMEDIATE, ROOT
-constructPEMChain: false
+constructPEMChain: true
 
 # Return secrets in grpc response to the driver (supported in driver v0.0.21+) instead of writing to filesystem
 driverWriteSecrets: true
