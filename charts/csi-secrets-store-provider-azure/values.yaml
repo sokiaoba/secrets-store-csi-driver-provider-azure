@@ -99,6 +99,8 @@ secrets-store-csi-driver:
   install: true
   linux:
     enabled: true
+    nodeSelector:
+      env: dev
     kubeletRootDir: /var/lib/kubelet
     metricsAddr: ":8080"
     image:
